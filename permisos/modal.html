@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>Nuevo Usuario</title>
+  <title>Nuevo Permiso</title>
   <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
   <meta name="description" content="Listado de usuarios, con opción de buscar,      crear, editar y eliminar">
   <meta name="author" content="Edwin Torres">
@@ -18,7 +18,7 @@
     <!-- Encabezado del modal -->
     <header>
       <h1>
-        Nuevo Usuario
+        Nuevo Permiso
       </h1>
     </header>
 
@@ -26,18 +26,15 @@
     <form action="">
       <div>
         <label for="nombre">
-          Nombre:
+          Permiso:
         </label>
         <input type="text" name="nombre" id="nombre" placeholder="Nombre de usuario...">
       </div>
       <div>
-        <label>
-          Estado:
+        <label for="descripcion">
+          Descripción:
         </label>
-        <input type="radio" value="1">
-        <span>Activo</span>
-        <input type="radio" value="2">
-        <span>Inactivo</span>
+        <input type="text" name="descripcion" id="descripcion">
       </div>
       <a href="index.html">Cancelar</a>
       <button type="submit">Guardar</button>
