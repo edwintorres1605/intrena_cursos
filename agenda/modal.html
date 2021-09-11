@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Agendar curso</title>
+  <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Listado de usuarios, con opción de buscar,      crear, editar y eliminar">
+  <meta name="author" content="Edwin Torres">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
 </head>
 <body>
-    
-    
+
+  <section>
+
+    <!-- Encabezado del modal -->
+    <header>
+      <h1>
+        Agendar curso
+      </h1>
+    </header>
+
+    <!-- Formulario -->
+    <form action="">
+      <div>
+        <label for="curso">
+          Nombre del curso:
+        </label>
+        <select>
+            <option value="Inducción">Inducción</option>
+            <option value="Comunicación">Comunicación</option>
+            <option value="Habiliades Comerciales">Habiliades Comerciales</option>
+        </select>
+      </div>
+      <div>
+        <label>
+            Fecha inicial de creación
+        </label>
+        <input type="date">
+        <label>
+            Fecha final de creación
+        </label>
+        <input type="date">
+        <label>
+            Fecha inicial de activación
+        </label>
+        <input type="date">
+        <label>
+            Fecha final de activación
+        </label>
+        <input type="date">
+        <h3>Selección de prioridad</h3>
+        <label for="curso">
+            Curso previo:
+          </label>
+          <select>
+              <option value="Inducción">Inducción</option>
+              <option value="Comunicación">Comunicación</option>
+              <option value="Habiliades Comerciales">Habiliades Comerciales</option>
+          </select>
+          <label for="curso">
+            Curso posterior:
+          </label>
+          <select>
+              <option value="Inducción">Inducción</option>
+              <option value="Comunicación">Comunicación</option>
+              <option value="Habiliades Comerciales">Habiliades Comerciales</option>
+          </select>
+      </div>
+      <a href="index.html">Cancelar</a>
+      <button type="submit">Guardar</button>
+    </form>
+
+  </section>
+
 </body>
 </html>

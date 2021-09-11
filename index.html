@@ -1,229 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/img/favicon.ico">
-    <title>Index</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Agenda</title>
+  <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Listado de usuarios, con opción de buscar,      crear, editar y eliminar">
+  <meta name="author" content="Edwin Torres">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
+  <script src="https://kit.fontawesome.com/7ba1faa06e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="root">
-        <!--Main section-->
-        <section class="main">
-            <!--aside menu-->
-            <aside class="sider">
-                <!--aside box-->
-                <div class="sider layout">
-                    <!--index link-->
-                    <a href="https://app.intrena.co/">
-                        <!--logo box-->
-                        <div class="logo">
-                            <img src="src/img/logo.svg" alt="logo" class="imglogo" height="70px" width="70px">
-                            <img src="src/img/logo_type.svg" alt="logotype" class="imglogotype" height="70px" width="210" >
-                        </div>
-                    </a>
-                    <div>
-                        <ul class="menu" role="menu">
-                            <li class="agenda">Agenda</li>
-                            <li class="user">Usuarios</li>
-                            <li class="couerses">Cursos</li>
-                            <li class="roles">Roles</li>
-                            <li class="permits">Permisos</li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-            <!--display section-->
-            <section class="display-layout">
-                <header class="display-header">
-                    <!--menu fold icon box-->
-                    <div>
-                        <img src="" alt="menu fold icon" class="menu-fold">
-                    </div>
-                    <!--user name box-->
-                    <div class="div-right">
-                        <!--inner box-->
-                        <div>
-                            <!--user icon and name-->
-                            <img src="src/img/avatar.jpg">
-                            <h3>Patricia</h3>
-                        </div>
-                    </div>
-                </header>
-                <!--display title and Gantt button-->
-                <div>
-                    <!--display title box-->
-                    <div class="title">
-                        <h2> Agenda</h2>
-                    </div>
-                    <!--button box-->
-                    <div class="gantt-button">
-                        <input type="button" value="Mostrar cronograma">
-                    </div>
-                </div>
-                <!--main display box-->
-                <main class="main-layout-content">
-                    <!--main inner box-->
-                    <div class="content-internal">
-                        <span>
-                            <input type="text" value="Buscar">
-                            <span>
-                                <img src="">
-                            </span>
-                        </span>
-                        <!--top buttons box-->
-                        <div class="top-bottuns">
-                            <!--top buttons inner box-->
-                            <div class="buttons-group">
-                                <!--new course button-->
-                                <button type="button" class="primary-button">
-                                    <i>
-                                        <img src="">
-                                    </i>
-                                    <span>Nuevo curso</span>
-                                </button>
-                                <!--deploy button-->
-                                <button type="button">
-                                    <i>
-                                        <img src="">
-                                    </i>
-                                </button>
-                            </div>
-                        </div>
-                        <!--table box-->
-                        <div class="table-wrapper">
-                            <!--table inner box-->
-                            <div class="inner-box-1">
-                                <div class="inner-box-2">
-                                    <div class="inner-box-3">
-                                        <div class="inner-box-4">
-                                            <div class="inner-box-5">
-                                                <!--courses table-->
-                                                <table>
-                                                    <colgroup>
-                                                        <col>
-                                                        <col>
-                                                        <col>
-                                                        <col>
-                                                        <col>
-                                                        <col>
-                                                        <col>
-                                                    </colgroup>
-                                                    <!--table head-->
-                                                    <thead class="table-head">
-                                                        <tr>
-                                                            <th>
-                                                                <input type="checkbox">
-                                                            </th>
-                                                            <th>
-                                                                <span>Cursos</span>
-                                                            </th>
-                                                            <th>
-                                                                <span>Fecha de creación</span>
-                                                            </th>
-                                                            <th>
-                                                                <span>Fecha de activación</span>
-                                                            </th>
-                                                            <th>
-                                                                <span>Área</span>
-                                                            </th>
-                                                            <th>
-                                                                <span>Prioridad</span>
-                                                            </th>
-                                                            <th>
-                                                                <span>Estado</span>
-                                                            </th>
-                                                            <th>
-                                                                <span><sup>...</sup></span>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <!--table body-->
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <span>
-                                                                    <input type="checkbox">
-                                                                </span>
-                                                            </td>
-                                                            <td>
-                                                                <a href="">Comunicación Asertiva</a>
-                                                            </td>
-                                                            <td>15/01/2022</td>
-                                                            <td>01/02/2022</td>
-                                                            <td>General</td>
-                                                            <td>1</td>
-                                                            <td>Por hacer</td>
-                                                            <td><span><sup>...</sup></span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <span>
-                                                                    <input type="checkbox">
-                                                                </span>
-                                                            </td>
-                                                            <td>
-                                                                <a href="">Servicio al cliente</a>
-                                                            </td>
-                                                            <td>15/02/2022</td>
-                                                            <td>01/03/2022</td>
-                                                            <td>General</td>
-                                                            <td>2</td>
-                                                            <td>Por hacer</td>
-                                                            <td><span><sup>...</sup></span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <span>
-                                                                    <input type="checkbox">
-                                                                </span>
-                                                            </td>
-                                                            <td>
-                                                                <a href="">Habilidades Comerciales</a>
-                                                            </td>
-                                                            <td>15/03/2022</td>
-                                                            <td>01/04/2022</td>
-                                                            <td>Comercial</td>
-                                                            <td>3</td>
-                                                            <td>Por hacer</td>
-                                                            <td><span><sup>...</sup></span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a>
-                                                <img src="">
-                                            </a>
-                                        </li>
-                                        <li><a>1</a></li>
-                                        <li><a>2</a></li>
-                                        <li><a>3</a></li>
-                                        <li><a>4</a></li>
-                                        <li><a>5</a></li>
-                                        <li>
-                                            <a>
-                                                <img src="">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-                <!--footer-->
-                <footer>
-                    "Intrena ©"
-                    "2021"
-                </footer>
-            </section>
-        </section>
-    </div>
-    
+  
+  <!-- Barra lateral izquierda -->
+  <aside>
+
+    <!-- Encabezado de la barra lateral -->
+    <header>
+      <a href="../index.html">
+        <img src="src/img/logo.svg" alt="Logo de Intrena">
+        <img src="src/img/logo_type.svg" alt="Logosímbolo de Intrena">
+      </a>
+    </header>
+
+    <!-- Menú de opciones de la barra lateral -->
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html">
+            <i class="fas fa-calendar-alt"></i>
+            Agenda
+          </a>
+        </li>
+        <li>
+          <a href="../cursos/index.html">
+            <i class="fas fa-chalkboard-teacher"></i>
+            Cursos
+          </a>
+        </li>
+        <li>
+          <a href="../usuarios/index.html">
+            <i class="fas fa-users"></i>
+            Usuarios
+          </a>
+        </li>
+        <li>
+          <a href="../roles/index.html">
+            <i class="fas fa-user-tag"></i>
+            Roles
+          </a>
+        </li>
+        <li>
+          <a href="../permisos/index.html">
+            <i class="fas fa-user-shield"></i>
+            Permisos
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+
+  <!-- Sección derecha -->
+  <section>
+
+    <!-- Encabezado - Barra superior -->
+    <header>
+        <i class="fas fa-bars"></i>
+        <img src="../src/img/avatar.jpg" alt="avatar de usuario">
+        <span>Nombre Usuario</span>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+      <header>
+        <h1>Agenda</h1>  
+        <span><i class="fa-solid fa-chart-gantt"></i>Ver Gantt</span>      
+      </header>
+
+      <section>
+        <article>
+          <header>
+            <form action="">
+              <input type="buscar" placeholder="Buscar...">
+              <i class="fas fa-search"></i>
+            </form>
+            <a href="modal.html">
+              <i class="fas fa-plus"></i>
+              Nuevo
+            </a>
+          </header>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Curso
+                </th>
+                <th>
+                    Fecha inicial de creación
+                </th>
+                <th>
+                    Fecha final de creación
+                </th>
+                <th>
+                    Fecha inicial de activación
+                </th>
+                <th>
+                    Fecha final de activación
+                </th>
+                <th>
+                    Área
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th colspan="2">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Inducción
+                </td>
+                <td>
+                  01/01/2021
+                </td>
+                <td>
+                    15/01/2021
+                </td>
+                <td>
+                    16/01/2021
+                </td>
+                <td>
+                    30/01/2021
+                </td>
+                <td>
+                    General
+                </td>
+                <td>
+                    Creado
+                </td>
+                <td>
+                  <a href="">
+                    Editar
+                  </a>
+                </td>
+                <td>
+                  <a href="">
+                    Eliminar
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Comunicación Aseriva
+                </td>
+                <td>
+                  01/02/2021
+                </td>
+                <td>
+                    15/02/2021
+                </td>
+                <td>
+                    16/02/2021
+                </td>
+                <td>
+                    30/02/2021
+                </td>
+                <td>
+                    Desarrollo Humano
+                </td>
+                <td>
+                    En progreso
+                </td>
+                <td>
+                  <a href="">
+                    Editar
+                  </a>
+                </td>
+                <td>
+                  <a href="">
+                    Eliminar
+                  </a>
+                </td>
+                <tr>
+                    <td>
+                      Habilidades Comerciales
+                    </td>
+                    <td>
+                        01/03/2021
+                    </td>
+                    <td>
+                        15/03/2021
+                    </td>
+                    <td>
+                        16/03/2021
+                    </td>
+                    <td>
+                        30/03/2021
+                    </td>
+                    <td>
+                        Comercial
+                    </td>
+                    <td>
+                        Pendiente
+                    </td>
+                    <td>
+                      <a href="">
+                        Editar
+                      </a>
+                    </td>
+                    <td>
+                      <a href="">
+                        Eliminar
+                      </a>
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+          <!-- Paginador -->
+          <footer>
+            <p>
+              Página 1 de 3
+            </p>
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fas fa-angle-left"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </li>
+            </ul>
+          </footer>          
+        </article>
+        <footer>
+            Intrena © 2021
+        </footer>
+      </section>
+
+    </main>
+
+  </section>
+
+  <script src="../src/js/main.js"></script>
 </body>
 </html>
