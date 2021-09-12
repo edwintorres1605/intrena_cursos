@@ -1,15 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Agenda</title>
+  <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Listado de usuarios, con opción de buscar,      crear, editar y eliminar">
+  <meta name="author" content="Edwin Torres">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
+  <script src="https://kit.fontawesome.com/7ba1faa06e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>
-        Título
-    </h1>
-    
+  
+  <!-- Barra lateral izquierda -->
+  <aside>
+
+    <!-- Encabezado de la barra lateral -->
+    <header>
+      <a href="../index.html">
+        <img src="src/img/logo.svg" alt="Logo de Intrena">
+        <img src="src/img/logo_type.svg" alt="Logosímbolo de Intrena">
+      </a>
+    </header>
+
+    <!-- Menú de opciones de la barra lateral -->
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html">
+            <i class="fas fa-calendar-alt"></i>
+            Agenda
+          </a>
+        </li>
+        <li>
+          <a href="../cursos/index.html">
+            <i class="fas fa-chalkboard-teacher"></i>
+            Cursos
+          </a>
+        </li>
+        <li>
+          <a href="../usuarios/index.html">
+            <i class="fas fa-users"></i>
+            Usuarios
+          </a>
+        </li>
+        <li>
+          <a href="../roles/index.html">
+            <i class="fas fa-user-tag"></i>
+            Roles
+          </a>
+        </li>
+        <li>
+          <a href="../permisos/index.html">
+            <i class="fas fa-user-shield"></i>
+            Permisos
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+
+  <!-- Sección derecha -->
+  <section>
+
+    <!-- Encabezado - Barra superior -->
+    <header>
+        <i class="fas fa-bars"></i>
+        <img src="../src/img/avatar.jpg" alt="avatar de usuario">
+        <span>Nombre Usuario</span>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+      <header>
+        <h1>Agenda</h1>  
+        <span><i class="fa-solid fa-chart-gantt"></i>Ver Gantt</span>      
+      </header>
+
+      <section>
+        <article>
+          <header>
+            <form action="">
+              <input type="buscar" placeholder="Buscar...">
+              <i class="fas fa-search"></i>
+            </form>
+            <a href="modal.html">
+              <i class="fas fa-plus"></i>
+              Nuevo
+            </a>
+          </header>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Curso
+                </th>
+                <th>
+                    Fecha inicial de creación
+                </th>
+                <th>
+                    Fecha final de creación
+                </th>
+                <th>
+                    Fecha inicial de activación
+                </th>
+                <th>
+                    Fecha final de activación
+                </th>
+                <th>
+                    Área
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th colspan="2">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Inducción
+                </td>
+                <td>
+                  01/01/2021
+                </td>
+                <td>
+                    15/01/2021
+                </td>
+                <td>
+                    16/01/2021
+                </td>
+                <td>
+                    30/01/2021
+                </td>
+                <td>
+                    General
+                </td>
+                <td>
+                    Creado
+                </td>
+                <td>
+                  <a href="">
+                    Editar
+                  </a>
+                </td>
+                <td>
+                  <a href="">
+                    Eliminar
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Comunicación Aseriva
+                </td>
+                <td>
+                  01/02/2021
+                </td>
+                <td>
+                    15/02/2021
+                </td>
+                <td>
+                    16/02/2021
+                </td>
+                <td>
+                    30/02/2021
+                </td>
+                <td>
+                    Desarrollo Humano
+                </td>
+                <td>
+                    En progreso
+                </td>
+                <td>
+                  <a href="">
+                    Editar
+                  </a>
+                </td>
+                <td>
+                  <a href="">
+                    Eliminar
+                  </a>
+                </td>
+                <tr>
+                    <td>
+                      Habilidades Comerciales
+                    </td>
+                    <td>
+                        01/03/2021
+                    </td>
+                    <td>
+                        15/03/2021
+                    </td>
+                    <td>
+                        16/03/2021
+                    </td>
+                    <td>
+                        30/03/2021
+                    </td>
+                    <td>
+                        Comercial
+                    </td>
+                    <td>
+                        Pendiente
+                    </td>
+                    <td>
+                      <a href="">
+                        Editar
+                      </a>
+                    </td>
+                    <td>
+                      <a href="">
+                        Eliminar
+                      </a>
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+          <!-- Paginador -->
+          <footer>
+            <p>
+              Página 1 de 3
+            </p>
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fas fa-angle-left"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </li>
+            </ul>
+          </footer>          
+        </article>
+        <footer>
+            Intrena © 2021
+        </footer>
+      </section>
+
+    </main>
+
+  </section>
+
+  <script src="../src/js/main.js"></script>
 </body>
 </html>
