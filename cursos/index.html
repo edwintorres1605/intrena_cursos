@@ -1,12 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Cursos</title>
+  <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Listado de cursos a agendar para planear en la vigencia">
+
 </head>
 <body>
+  
+  <!-- Barra lateral izquierda -->
+  <aside>
 
+    <!-- Encabezado de la barra lateral -->
+    <header>
+      <a href="../index.html">
+        <img src="../src/img/logo-Intrena.png" alt="Logo de Intrena">
+      </a>
+    </header>
+
+    <!-- Menú de opciones de la barra lateral -->
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html">
+            <i class="fas fa-calendar-alt"></i>
+            Agenda
+          </a>
+        </li>
+        <li>
+          <a href="../cursos/index.html">
+            <i class="fas fa-chalkboard-teacher"></i>
+            Cursos
+          </a>
+        </li>
+        <li>
+          <a href="../usuarios/index.html">
+            <i class="fas fa-users"></i>
+            Usuarios
+          </a>
+        </li>
+        <li>
+          <a href="../roles/index.html">
+            <i class="fas fa-user-tag"></i>
+            Roles
+          </a>
+        </li>
+        <li>
+          <a href="../permisos/index.html">
+            <i class="fas fa-user-shield"></i>
+            Permisos
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+
+  <!-- Sección derecha -->
+  <section>
+
+    <!-- Encabezado - Barra superior -->
+    <header>
+      <img src="../src/img/notebook.svg" alt="notebook">
+      <span>Cursos</span>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+      <header>
+        <h1>Cursos</h1>        
+      </header>
+
+      <section>
+        <article>
+          <header>
+            <form action="">
+              <input type="buscar" placeholder="Buscar...">
+              <i class="fas fa-search"></i>
+            </form>
+            <a href="modal.html">
+              <i class="fas fa-plus"></i>
+              Seleccionar
+            </a>
+          </header>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Curso
+                </th>
+                <th>
+                  Duración
+                  (Semanas)
+                </th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  HSEQ
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  <form action="">
+                    <input type="seleccionar" placeholder="Fecha inicio...">
+                    <i class="fas fa-search"></i>
+                  </form>
+                </td>
+                <td>
+                    <form action="">
+                        <input type="seleccionar" placeholder="Fecha fin...">
+                        <i class="fas fa-search"></i>
+                    </form>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Comunicación
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                    <form action="">
+                        <input type="seleccionar" placeholder="Fecha inicio...">
+                        <i class="fas fa-search"></i>
+                    </form>
+                </td>
+                <td>
+                    <form action="">
+                        <input type="seleccionar" placeholder="Fecha fin...">
+                        <i class="fas fa-search"></i>
+                    </form>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Inducción
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                    <form action="">
+                        <input type="seleccionar" placeholder="Fecha inicio...">
+                        <i class="fas fa-search"></i>
+                    </form>
+                </td>
+                <td>
+                    <form action="">
+                        <input type="seleccionar" placeholder="Fecha fin...">
+                        <i class="fas fa-search"></i>
+                    </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Paginador -->
+          <footer>
+            <p>
+              Página 1 de 3
+            </p>
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fas fa-angle-left"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </li>
+            </ul>
+          </footer>          
+        </article>
+      </section>
+
+    </main>
+
+  </section>
+
+  <script src="../src/js/main.js"></script>
 </body>
 </html>
