@@ -11,6 +11,7 @@
         <meta name="author" content="Equipo2G01 MisionTic2022 UNAB">
         
         <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
+
         <title>Cursos - Intrena</title>        
 
         <!-- Fuentes de iconos y texto -->
@@ -58,8 +59,9 @@
                         <span>Cursos</span> 
                     </a>
                 </li>
+
                 <li class="nav-item mt-1 mb-2">
-                    <a href="--/usuarios/index.html" class="nav-link py-2">
+                    <a href="../usuarios/index.html" class="nav-link py-2">
                         <i class="fas fa-users"></i>
                         <span>Usuarios</span> 
                     </a>
@@ -135,7 +137,10 @@
                                         </a>
                                         <thead>
                                             <tr>
+                                                <!-- MODIFICAR CADA TÍTULO DE COLUMNA th Y AGREGAR O QUITAR COLUMNAS
+                                                    SEGÚN LO QUE CONTENGA SU TABLA Y ELIMINAR ESTE MENSAJE -->
                                                 <th>Nombre</th>
+                                                <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -178,6 +183,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Footer -->
                     <footer class="sticky-footer">
                         <div class="container my-auto">
@@ -206,6 +212,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
+                      
                         <h5 class="modal-title" id="exampleModalLabel">Nuevo curso</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
@@ -213,19 +220,21 @@
                     </div>
                     <div class="modal-body">
                       <form>
+                    
                         <div class="form-group row">
-                          <label for="inputEmail3" class="col-sm-2 col-form-label">Curso</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Curso">
-                          </div>
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Curso</label>
+                        <div class="col-sm-10">
+                          <input type="Curso" class="form-control" id="inputEmail3" placeholder="">
                         </div>
-                        
-                        <div class="modal-footer">
+                      </div>
+                      
+                      <div class="modal-footer">
                           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                           <button class="btn btn-primary" type="button" data-dismiss="modal">Guardar</button>
                       </div>
-                      </form>
+                    </form>
                     </div>
+                    
 
                 </div>
             </div>
