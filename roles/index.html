@@ -1,101 +1,98 @@
 <!DOCTYPE html>
 
 <html lang="es">
-
+    
     <head>
-
+    
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
-       
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
         <meta name="description" content="Listado de roles, con opción de buscar, crear, editar y eliminar">
         <meta name="author" content="Equipo2G01 MisionTic2022 UNAB">
-        
+    
         <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
-        
-        <title>Roles - Intrena</title>        
-
+        <title>Roles - Intrena</title>
+    
         <!-- Fuentes de iconos y texto -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
         <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
-
         <!-- Estilos del tema SB Admin 2 de Bootstrap 4 -->
         <link href="../src/css/sb-admin-2.min.css" rel="stylesheet">
-
+    
         <!-- Estilos de DataTables para Bootstrap 4 -->
         <link href="../src/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
+    
         <!-- Estilos propios -->
         <link rel="stylesheet" href="../src/css/main.css">
-
+    
     </head>
-
+    
     <body id="page-top">
     
         <!-- Envoltura de la página -->
         <div id="wrapper">
-
-            <!-- Barra lateral izquierda -->            
+    
+            <!-- Barra lateral izquierda -->
             <ul class="navbar-nav my-bg-black sidebar sidebar-dark accordion my-w-200" id="accordionSidebar">
-
+    
                 <!-- Logo y Marca -->
-                <a href="../index.html" class="sidebar-brand d-flex align-items-center justify-content-center m-3 p-0">                      
+                <a href="../index.html" class="sidebar-brand d-flex align-items-center justify-content-center m-3 p-0">
                     <img src="../src/img/logo.svg" alt="Logo de Intrena" width="32px">
                     <div class="sidebar-brand-text my-ml-10">
-                        <img src="../src/img/logo_type.svg" alt="Logo-nombre de Intrena" width="111px">                    
+                        <img src="../src/img/logo_type.svg" alt="Logo-nombre de Intrena" width="111px">
                     </div>
-                    
+    
                 </a>
-
+    
                 <li class="nav-item mt-1 mb-2">
                     <a href="../index.html" class="nav-link py-2">
                         <i class="fas fa-calendar-alt"></i>
-                        <span>Agenda</span> 
+                        <span>Agenda</span>
                     </a>
                 </li>
                 <li class="nav-item mt-1 mb-2">
                     <a href="../cursos/index.html" class="nav-link py-2">
                         <i class="fas fa-chalkboard-teacher"></i>
-                        <span>Cursos</span> 
-                    </a>
-                </li>
-                
-                <li class="nav-item active my-active mt-1 mb-2">
-                    
-                    <a href="../usuarios/index.html" class="nav-link py-2">
-                        <i class="fas fa-users"></i>
-                        <span>Usuarios</span> 
+                        <span>Cursos</span>
                     </a>
                 </li>
                 <li class="nav-item mt-1 mb-2">
+                    <a href="../usuarios/index.html" class="nav-link py-2">
+                        <i class="fas fa-users"></i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li class="nav-item active my-active mt-1 mb-2">
                     <a href="" class="nav-link py-2">
                         <i class="fas fa-user-tag"></i>
-                        <span>Roles</span> 
+                        <span>Roles</span>
                     </a>
                 </li>
                 <li class="nav-item mt-1 mb-2">
                     <a href="../permisos/index.html" class="nav-link py-2">
                         <i class="fas fa-user-shield"></i>
-                        <span>Permisos</span> 
+                        <span>Permisos</span>
                     </a>
                 </li>
             </ul>
             <!-- Fin de barra lateral izquierda -->
-
+    
             <!-- Sección derecha -->
-            <div  id="content-wrapper" class="d-flex flex-column">
-                <!-- Encabezado - Barra superior -->  
+            <div id="content-wrapper" class="d-flex flex-column">
+                <!-- Encabezado - Barra superior -->
                 <main id="content">
                     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                         <!-- Sidebar Toggler (Sidebar) -->
                         <div class="text-center d-none d-md-inline">
-                            <i class="fas fa-bars ml-2 text-lg" id="sidebarToggle"></i>              
+                            <i class="fas fa-bars ml-2 text-lg" id="sidebarToggle"></i>
                         </div>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                  
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img class="img-profile rounded-circle" src="../src/img/avatar.svg">
                                     <span class="ml-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 </a>
@@ -116,69 +113,57 @@
                                         Cerrar sesión
                                     </a>
                                 </div>
-                            </li>                            
-                        </ul> 
+                            </li>
+                        </ul>
                     </nav>
-
+    
                     <div class="container-fluid">
                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
                             <h1 class="h4 mb-2 text-gray-900">
-                                
                                 Roles
-                            </h1>  
+                            </h1>
                         </div>
-
+    
                         <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-body">
                                 <div class="table-responsive my-text-14">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <a href="#" class="float-left d-none d-sm-inline-block btn btn-sm btn-danger my-btn-red shadow-sm"
+                                        <a href="modal.html"
+                                            class="float-left d-none d-sm-inline-block btn btn-sm btn-danger my-btn-red shadow-sm"
                                             data-toggle="modal" data-target="#newModal">
                                             <i class="fas fa-plus fa-sm text-white-50 mr-2"></i>
-                                           
-                                            Nuevo Roll
+                                            Nuevo rol
                                         </a>
                                         <thead>
                                             <tr>
-                                                
-                                                <th>Nombre</th>
-                                                <th>Descripcion</th>
-                                                
+                                                <th>Rol</th>
+                                                <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                
                                                 <td>Administrador</td>
-                                                <td>Administrador del curso</td>
                                                 <td>
-                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
+                                                    <a href=""
+                                                        class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
+                                                    <a href=""
+                                                        class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
                                                         <i class="fas fa-trash-alt"></i>
                                                     </a>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                
-                                                <td>Estuadiante</td>
-                                                <td>Quien realiza el curso</td>
+                                                <td>Estudiante</td>
                                                 <td>
-                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
+                                                    <a href=""
+                                                        class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            
-                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
-                                                        <i class="fas fa-edit"></i>
-                                                    </a>
-                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
+                                                    <a href=""
+                                                        class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
                                                         <i class="fas fa-trash-alt"></i>
                                                     </a>
                                                 </td>
@@ -189,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <!-- Footer -->
                     <footer class="sticky-footer">
                         <div class="container my-auto">
@@ -199,101 +184,64 @@
                         </div>
                     </footer>
                     <!-- End of Footer -->
-
+    
                 </main>
-
-            </div>          
-
-        </div>   
-        <!-- Fin de la envoltura de la página --> 
-        
-        
+    
+            </div>
+    
+        </div>
+        <!-- Fin de la envoltura de la página -->
+    
         <!-- Inicio del Modal-->
         <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo rol</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
-                        
                     </div>
-                    <div class="modal-body">Nuevo roll.</div>
-                    <form>
-                        <div class="row mb-3">
-                          <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3">
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Apellido</label>
-                            <div class="col-sm-10">
-                              <input type="email" class="form-control" id="inputEmail3">
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row mb-3">
+                                <label for="rol" class="col-sm-2 col-form-label">Rol</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="rol">
+                                </div>
                             </div>
-                          </div>
-                          <div class="row mb-3">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Documento</label>
-                            <div class="col-sm-10">
-                              <input type="email" class="form-control" id="inputEmail3">
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
-                          </div>
-                         <div class="row mb-3">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Cargo</label>
-                            <div class="col-sm-10">
-                              <input type="email" class="form-control" id="inputEmail3">
-                            </div>
-                          </div>
-                        <div class="row mb-3">
-                          <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
-                          <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3">
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Roll</label>
-                            <div class="col-sm-10">
-                              <input type="email" class="form-control" id="inputEmail3">
-                            </div>
-                          </div>
-                      
-                          </div>
-                        </div>
-                        
-                      </form>
-                    
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Fin del Modal -->
-
+    
         <!-- Scripts JS de JQuery y Bootstrap 4 -->
         <script src="../src/plugins/jquery/jquery.min.js"></script>
         <script src="../src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    
         <!-- Scripts JS de JQuery easing -->
         <script src="../src/plugins/jquery-easing/jquery.easing.min.js"></script>
-
+    
         <!-- Scripts JS del tema SB Admins 2 de Bootstrap 4 -->
         <script src="../src/js/sb-admin-2.min.js"></script>
-
+    
         <!-- Plugins -->
         <script src="../src/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="../src/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-
+    
         <!-- Scripts JS de DataTables ajustados para el tema SB Admin 2 de Bootstrap 4 -->
         <script src="../src/js/demo/datatables-demo.js"></script>
-
+    
         <!-- Scripts JS propios -->
         <script src="../src/js/main.js"></script>
-            
+    
     </body>
-
+    
 </html>
