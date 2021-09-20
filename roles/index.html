@@ -1,98 +1,299 @@
 <!DOCTYPE html>
+
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>roles</title>
-    <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
-</head>
- 
 
-<body>
-    <header>
-        <a href="../index.html">
-          <img src="../src/img/logo-Intrena.png" alt="Logo de Intrena">
-          <label>Usuario@: </label><br><br>
-        </a>
-      </header>    
-    
-    
-    <nav>
-        <ul>
-          <li>
-            <a href="../index.html">
-              <i class="fas fa-calendar-alt"></i>
-              Agenda
-            </a>
-          </li>
-          <li>
-            <a href="../cursos/index.html">
-              <i class="fas fa-chalkboard-teacher"></i>
-              Cursos
-            </a>
-          </li>
-          <li>
-            <a href="../usuarios/index.html">
-              <i class="fas fa-users"></i>
-              Usuarios
-            </a>
-          </li>
-          <li>
-            <a href="../roles/index.html">
-              <i class="fas fa-user-tag"></i>
-              Roles
-            </a>
-          </li>
-          <li>
-            <a href="../permisos/index.html">
-              <i class="fas fa-user-shield"></i>
-              Permisos
-            </a>
-          </li>
-        </ul>
-      </nav>
-  
-    </aside>
-<header>
-    <form action="">
-        <table>
-            <tr>
-                <td><input type="text" placeholder="Buscar..."></td>
-            </tr>
-        </table>
-    </form>
-</header>
-<header>
-    <form action="">
-        <table>
-            <tr>
-                <a href="modal.html"><td><input type="text" placeholder="+ Nuevo Rol"></td></a>
-            </tr>
-        </table>
-    </form>
-</header>
-<h2>ROLES</h2>
+    <head>
 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+       
+        <meta name="description" content="Listado de roles, con opción de buscar, crear, editar y eliminar">
+        <meta name="author" content="Equipo2G01 MisionTic2022 UNAB">
+        
+        <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
+        
+        <title>Roles - Intrena</title>        
+
+        <!-- Fuentes de iconos y texto -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
+
+        <!-- Estilos del tema SB Admin 2 de Bootstrap 4 -->
+        <link href="../src/css/sb-admin-2.min.css" rel="stylesheet">
+
+        <!-- Estilos de DataTables para Bootstrap 4 -->
+        <link href="../src/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+        <!-- Estilos propios -->
+        <link rel="stylesheet" href="../src/css/main.css">
+
+    </head>
+
+    <body id="page-top">
     
-    <table style="width:max-content;"> 
-     <tr>
-        <th>NOMBRE</th>
-        <th>DESCRIPCION</th>
-                            
-     </tr>
-     <tr>
-        <td>Administrador</td>
-        <td>Administrador de cursos</td>
-                            
-    </tr>
-     <tr>
-     <td>Estudiante</td>
-     <td>Quien realiza el curso</td>
-                            
-     </tr>
-     </table><br><br><br><br>
-               
-<footer>Intrena © 2021</footer>
-</body>
+        <!-- Envoltura de la página -->
+        <div id="wrapper">
+
+            <!-- Barra lateral izquierda -->            
+            <ul class="navbar-nav my-bg-black sidebar sidebar-dark accordion my-w-200" id="accordionSidebar">
+
+                <!-- Logo y Marca -->
+                <a href="../index.html" class="sidebar-brand d-flex align-items-center justify-content-center m-3 p-0">                      
+                    <img src="../src/img/logo.svg" alt="Logo de Intrena" width="32px">
+                    <div class="sidebar-brand-text my-ml-10">
+                        <img src="../src/img/logo_type.svg" alt="Logo-nombre de Intrena" width="111px">                    
+                    </div>
+                    
+                </a>
+
+                <li class="nav-item mt-1 mb-2">
+                    <a href="../index.html" class="nav-link py-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Agenda</span> 
+                    </a>
+                </li>
+                <li class="nav-item mt-1 mb-2">
+                    <a href="../cursos/index.html" class="nav-link py-2">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Cursos</span> 
+                    </a>
+                </li>
+                
+                <li class="nav-item active my-active mt-1 mb-2">
+                    
+                    <a href="../usuarios/index.html" class="nav-link py-2">
+                        <i class="fas fa-users"></i>
+                        <span>Usuarios</span> 
+                    </a>
+                </li>
+                <li class="nav-item mt-1 mb-2">
+                    <a href="" class="nav-link py-2">
+                        <i class="fas fa-user-tag"></i>
+                        <span>Roles</span> 
+                    </a>
+                </li>
+                <li class="nav-item mt-1 mb-2">
+                    <a href="../permisos/index.html" class="nav-link py-2">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Permisos</span> 
+                    </a>
+                </li>
+            </ul>
+            <!-- Fin de barra lateral izquierda -->
+
+            <!-- Sección derecha -->
+            <div  id="content-wrapper" class="d-flex flex-column">
+                <!-- Encabezado - Barra superior -->  
+                <main id="content">
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                        <!-- Sidebar Toggler (Sidebar) -->
+                        <div class="text-center d-none d-md-inline">
+                            <i class="fas fa-bars ml-2 text-lg" id="sidebarToggle"></i>              
+                        </div>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                  
+                                    <img class="img-profile rounded-circle" src="../src/img/avatar.svg">
+                                    <span class="ml-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Perfil
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Ajustes
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Cerrar sesión
+                                    </a>
+                                </div>
+                            </li>                            
+                        </ul> 
+                    </nav>
+
+                    <div class="container-fluid">
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h4 mb-2 text-gray-900">
+                                
+                                Roles
+                            </h1>  
+                        </div>
+
+                        <!-- DataTales Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-body">
+                                <div class="table-responsive my-text-14">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <a href="#" class="float-left d-none d-sm-inline-block btn btn-sm btn-danger my-btn-red shadow-sm"
+                                            data-toggle="modal" data-target="#newModal">
+                                            <i class="fas fa-plus fa-sm text-white-50 mr-2"></i>
+                                           
+                                            Nuevo Roll
+                                        </a>
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th>Nombre</th>
+                                                <th>Descripcion</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td>Administrador</td>
+                                                <td>Administrador del curso</td>
+                                                <td>
+                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>Estuadiante</td>
+                                                <td>Quien realiza el curso</td>
+                                                <td>
+                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            
+                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm float-left pr-1">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a href="" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm ml-2">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="sticky-footer">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span class="my-text-14">Intrena &copy; 2021</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
+                </main>
+
+            </div>          
+
+        </div>   
+        <!-- Fin de la envoltura de la página --> 
+        
+        
+        <!-- Inicio del Modal-->
+        <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        
+                    </div>
+                    <div class="modal-body">Nuevo roll.</div>
+                    <form>
+                        <div class="row mb-3">
+                          <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3">
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Apellido</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Documento</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                          </div>
+                         <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Cargo</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                          </div>
+                        <div class="row mb-3">
+                          <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3">
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Roll</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                          </div>
+                      
+                          </div>
+                        </div>
+                        
+                      </form>
+                    
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin del Modal -->
+
+        <!-- Scripts JS de JQuery y Bootstrap 4 -->
+        <script src="../src/plugins/jquery/jquery.min.js"></script>
+        <script src="../src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Scripts JS de JQuery easing -->
+        <script src="../src/plugins/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Scripts JS del tema SB Admins 2 de Bootstrap 4 -->
+        <script src="../src/js/sb-admin-2.min.js"></script>
+
+        <!-- Plugins -->
+        <script src="../src/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="../src/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Scripts JS de DataTables ajustados para el tema SB Admin 2 de Bootstrap 4 -->
+        <script src="../src/js/demo/datatables-demo.js"></script>
+
+        <!-- Scripts JS propios -->
+        <script src="../src/js/main.js"></script>
+            
+    </body>
+
 </html>
