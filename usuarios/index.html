@@ -23,7 +23,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
         <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
-
+        <!-- Estilos de Bootstrap -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
         <!-- Estilos del tema SB Admin 2 de Bootstrap 4 -->
         <link href="../src/css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -70,13 +71,13 @@
                     <!-- MODIFICAR LINK DEL HREF DEJANDO SOLO index.html EN LA OPCIÓN
                         DEL MENÚ QUE ESTÉ EDITANDO. Y ESTE HREF FAVOR DEJARLO COMO 
                         ../usuarios/index.html Y ELIMINAR ESTE MENSAJE -->
-                    <a href="index.html" class="nav-link py-2">
+                    <a href="../usuarios/index.html" class="nav-link py-2">
                         <i class="fas fa-users"></i>
                         <span>Usuarios</span> 
                     </a>
                 </li>
                 <li class="nav-item mt-1 mb-2">
-                    <a href="../roles/index.html" class="nav-link py-2">
+                    <a href="" class="nav-link py-2">
                         <i class="fas fa-user-tag"></i>
                         <span>Roles</span> 
                     </a>
@@ -236,16 +237,41 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo usuario</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST">
+                            <div class="row mb-3">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                              <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <div class="col-sm-10 offset-sm-2">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                  <label class="form-check-label" for="gridCheck1">
+                                    Example checkbox
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                          </form>
+                    </div>                    
                 </div>
             </div>
         </div>
