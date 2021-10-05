@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Usuario {
 	@Id
 	@Column(name="id")
-	private Integer id;
+	private Long id;
 	@Column(name="nombre")
 	private String nombre;
 	@Column(name="email")
@@ -21,10 +21,10 @@ public class Usuario {
 	@Column(name="foto_perfil")
 	private String fotoPerfil;
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombre() {

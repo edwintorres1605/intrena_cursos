@@ -2,7 +2,6 @@ package co.intrena.controllers;
 import java.util.List;
 import java.util.Optional;
 
-//Aqui se crean lo métodos
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,52 +14,67 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.intrena.model.entity.Usuario;
 import co.intrena.model.services.UsuarioService;
+import co.intrena.security.JWTUtil;
 
 
 @RestController
-
 @RequestMapping("/api/usuarios")
-
 public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;
-	@GetMapping("/{Id}")
 	
-	public Optional<Usuario> buscarPorId(@PathVariable Integer Id){
-		usuarioService.findById(Id);
-		return usuarioService.findById(Id);
+	@Autowired 
+	private JWTUtil jwtUtil;
+	
+	@GetMapping("/{id}")
+	public Optional<Usuario> buscarPorId(@PathVariable Long id){
+		return usuarioService.findById(id);
 	}
+	
 	@GetMapping("/listar")
 	public List<Usuario> listar(){
 		return usuarioService.findAll();
 	}
 	
 	@PostMapping
-	
 	public Usuario guardar(@RequestBody Usuario usuario) {
 		return usuarioService.save(usuario);
-	}
+	}	
 	
-	@DeleteMapping("{Id}")
-	public void eliminar(@PathVariable Integer Id) {
-		usuarioService.deleteById(Id);
-	}
-	
-	@PutMapping ("/actualizar/{id}")
-	public Usuario actualizar(@RequestBody Usuario usuario , @PathVariable Integer id) {
+	@PutMapping
+	public Usuario actualizar(@RequestBody Usuario usuario) {
 		
-		Usuario usuarioEnBD= usuarioService.findById(id).get();
+		Usuario usuarioEnBD= usuarioService.findById(usuario.getId()).get();
 		
-		System.out.println("usuario por body: "+usuario);
-		System.out.println("en DB"+usuarioEnBD);
 		usuarioEnBD.setNombre(usuario.getNombre()); 
 		usuarioEnBD.setPassword(usuario.getPassword());
 		usuarioEnBD.setEmail(usuario.getEmail());
 		usuarioEnBD.setFotoPerfil(usuario.getFotoPerfil());
-		System.out.println("asi quedo en DB"+usuarioEnBD);
 		
-		usuarioService.save(usuarioEnBD);
-		return usuario;
+		return usuarioService.save(usuarioEnBD);
+	}
+	
+	@DeleteMapping("{id}")
+	public void eliminar(@PathVariable Long id) {
+		usuarioService.deleteById(id);
+	}
+	
+	@GetMapping("/validar")
+	public String validar(@RequestBody Usuario usuario)
+	{
+		String email = usuario.getEmail();
+		String ctr = usuario.getPassword();
+		Usuario user = usuarioService.findById(usuarioService.ConsultarPorCredenciales(ctr, email)).get();
+		
+		if (user != null)
+		{
+			//Crear jwt
+			String token = jwtUtil.crearToken(String.valueOf(user.getId()), user.getEmail());
+			return token;
+		}else
+		{
+			return "incorrecto";
+		}
 	}
 	
 }

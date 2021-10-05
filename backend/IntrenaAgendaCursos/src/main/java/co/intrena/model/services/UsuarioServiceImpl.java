@@ -23,9 +23,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public Optional<Usuario> findById(Integer Id) {
+	public Optional<Usuario> findById(Long id) {
 		// TODO Auto-generated method stub
-		return usuarioRepository.findById(Id);
+		return usuarioRepository.findById(id);
 	}
 
 	@Override
@@ -37,9 +37,15 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 
 	@Override
-	public void deleteById(Integer Id) {
+	public void deleteById(Long id) {
 		// TODO Auto-generated method stub
-		usuarioRepository.deleteById(Id);
+		usuarioRepository.deleteById(id);
+	}
+
+	@Override
+	public Long ConsultarPorCredenciales(String password, String email) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
