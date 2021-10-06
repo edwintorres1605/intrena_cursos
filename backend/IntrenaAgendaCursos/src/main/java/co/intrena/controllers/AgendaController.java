@@ -49,12 +49,12 @@ public class AgendaController {
 		
 		Agenda agendaEnBd = agendaService.findById(id).get();
 		
-		agendaEnBd.setCursoId(agenda.getCursoId());
+		agendaEnBd.setCurso(agenda.getCurso());
 		agendaEnBd.setFechaInicrea(agenda.getFechaInicrea());
 		agendaEnBd.setFechaFincrea(agenda.getFechaFincrea());
 		agendaEnBd.setFechaIniact(agenda.getFechaIniact());
 		agendaEnBd.setFechaFinact(agenda.getFechaFinact());
-		agendaEnBd.setAreaId(agenda.getAreaId());
+		agendaEnBd.setArea(agenda.getArea());
 		agendaEnBd.setEstado(agenda.getEstado());
 		
 		agendaService.save(agendaEnBd);

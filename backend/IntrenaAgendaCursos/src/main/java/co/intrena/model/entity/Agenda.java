@@ -4,6 +4,8 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -21,10 +23,11 @@ public class Agenda {
 	
 	@ManyToOne
 	@JoinColumn (name = "curso_id")
-	private Integer cursoId;
+	private Curso curso;
 	
-	@Column (name = "fecha_inicre")
+	@Column (name = "fecha_inicrea")
 	private Date fechaInicrea;
+	
 	
 	@Column (name = "fecha_fincrea")
 	private Date fechaFincrea;
@@ -37,7 +40,7 @@ public class Agenda {
 	
 	@ManyToOne
 	@JoinColumn (name = "area_id")
-	private Integer areaId;
+	private Area area;
 	
 	@Column (name = "estado")
 	private String estado;
@@ -50,12 +53,12 @@ public class Agenda {
 		this.id = id;
 	}
 
-	public Integer getCursoId() {
-		return cursoId;
+	public Curso getCurso() {
+		return curso;
 	}
 
-	public void setCursoId(Integer cursoId) {
-		this.cursoId = cursoId;
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
 
 	public Date getFechaInicrea() {
@@ -90,12 +93,12 @@ public class Agenda {
 		this.fechaFinact = fechaFinact;
 	}
 
-	public Integer getAreaId() {
-		return areaId;
+	public Area getArea() {
+		return area;
 	}
 
-	public void setAreaId(Integer areaId) {
-		this.areaId = areaId;
+	public void setArea(Area area) {
+		this.area = area;
 	}
 
 	public String getEstado() {
@@ -108,8 +111,8 @@ public class Agenda {
 
 	@Override
 	public String toString() {
-		return "Agenda [id=" + id + ", cursoId=" + cursoId + ", fechaInicrea=" + fechaInicrea + ", fechaFincrea="
-				+ fechaFincrea + ", fechaIniact=" + fechaIniact + ", fechaFinact=" + fechaFinact + ", areaId=" + areaId
+		return "Agenda [id=" + id + ", curso=" + curso + ", fechaInicrea=" + fechaInicrea + ", fechaFincrea="
+				+ fechaFincrea + ", fechaIniact=" + fechaIniact + ", fechaFinact=" + fechaFinact + ", areaId=" + area
 				+ ", estado=" + estado + "]";
 	}
 	
